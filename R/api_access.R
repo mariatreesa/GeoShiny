@@ -9,10 +9,10 @@ source("R/installing_packages.R")
 
 # start with url function
 
-url <- function(address, outputformat = "json") {
+url <- function(address, return.call="json",sensor = "false") {
   sample_key="sample key"
   root <- "http://maps.google.com/maps/api/geocode/"
-  u <- paste(root, outputformat, "?api_key=",sample_key,"&address=",address)
+  u <- paste(root,return.call,"?address=",address,"&api_key=",sample_key, "&sensor=", sensor, sep = "")
   return(URLencode(u))
 }
 
