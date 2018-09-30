@@ -9,11 +9,21 @@ source("R/installing_packages.R")
 
 # start with url function
 
-url <- function(address, return.call="json",sensor = "false") {
+url <- function(address, return.call="json") {
   sample_key="sample key"
   root <- "http://maps.google.com/maps/api/geocode/"
-  u <- paste(root,return.call,"?address=",address,"&api_key=",sample_key, "&sensor=", sensor, sep = "")
+  u <- paste(root,return.call,"?address=",address,"&key=",sample_key, "&sensor=", sensor, sep = "")
   return(URLencode(u))
 }
 
-GET(url("india"))
+
+geocode_api <- function(url, address) {
+  response <- GET(url(address))
+  if (http_type(response) != "application/json") {
+    stop("API did not return json", call. = FALSE)
+  }
+
+  jsonlite::fromJSON(content(response, "text"), simplifyVector = FALSE)
+}
+
+github_api(url, "Nairobi")
