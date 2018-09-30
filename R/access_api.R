@@ -10,7 +10,7 @@ source("R/installing_packages.R")
 # start with url function
 
 geocode_response <- function(address, return.call="json") {
-  sample_key=""
+ sample_key=""
   root <- "https://maps.google.com/maps/api/geocode/"
   u <- paste0(root,return.call,"?address=",address,"&key=",sample_key)
   res <- GET((URLencode(u)))
