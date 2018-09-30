@@ -10,14 +10,27 @@ source("R/installing_packages.R")
 # start with url function
 
 geocode_response <- function(address, return.call="json") {
-  sample_key="AIzaSyD80OXQy4HTR3igDo_Sc0g4foUghixMVZI"
+  sample_key=""
   root <- "https://maps.google.com/maps/api/geocode/"
   u <- paste0(root,return.call,"?address=",address,"&key=",sample_key)
   res <- GET((URLencode(u)))
-  result <- content(res, as = "text", encoding = "UTF-8")
-  result <- fromJSON(result,flatten = TRUE)
-  print(result)
+  result_json <- content(res, as = "text", encoding = "UTF-8")
+  result_ls <- fromJSON(result_json, flatten = FALSE)
+  return(result_ls)
 }
 
 
-geocode_response("Nairobi")
+response <- geocode_response("Nairobi")
+
+# Extract latitude
+lat <- response$results[[3]]$location$lat
+
+# Extract longitude
+long <- response$results[[3]]$location$lng
+
+# Coordinates
+coords <- cbind(lat, long)
+
+
+
+
