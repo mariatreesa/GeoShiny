@@ -1,16 +1,29 @@
+#' Function to get coordinates given an address, from geocode API
+#' Authors: Maria Treesa Sebastian(marse306), Brian Masinde(brima748), Omkar (omkbh878)
+
+#' @export geocode_response
+#'
+#' @param address as vector
+#'
+#' @return latitude and longitude of the address as a matirx
+#'
+#' @example geocode_response("Linkoping")
+
 # sourcing
 source("R/installing_packages.R")
 
 
-# geocode_apiurl <- function(path){
-#   url = modify_url("https://maps.googleapis.com/maps/api/geocode/", path = path)
-#   GET(url)
-# }
 
-# start with url function
 
-geocode_response <- function(address, return.call="json") {
- sample_key="sample_key"
+geocode_response <- function(address) {
+  if(is.vector(address) == FALSE || length(address) > 1) {
+    stop("Multiple addresses given")
+  }
+  if(address == ""){
+    stop("Please enter an address")
+  }
+  return.call="json"
+  sample_key="Sample_key"
   root <- "https://maps.google.com/maps/api/geocode/"
   u <- paste0(root,return.call,"?address=",address,"&key=",sample_key)
   res <- GET((URLencode(u)))
@@ -25,8 +38,6 @@ geocode_response <- function(address, return.call="json") {
   # Coordinates
   return(cbind(lat, long))
 }
-
-
 
 
 
