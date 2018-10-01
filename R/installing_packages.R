@@ -1,4 +1,9 @@
-# This R script is used for installing  and loading the required packages
+
+#'This R script is used for installing  and loading the required packages
+
+#' @return nothing
+#'
+#' @export
 
 # Check if packages is installed, else install
 
