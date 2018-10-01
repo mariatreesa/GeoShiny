@@ -1,4 +1,4 @@
 library(testthat)
 library(GeoShiny)
 
-test_check("Geoshiny")
+test_check("GeoShiny")

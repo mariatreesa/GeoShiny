@@ -1,19 +1,17 @@
 #' Function to get coordinates given an address, from geocode API
 #' Authors: Maria Treesa Sebastian(marse306), Brian Masinde(brima748), Omkar (omkbh878)
 
+#' @name geocode_response
+#'
 #' @export geocode_response
 #'
 #' @param address as vector
 #'
 #' @return latitude and longitude of the address as a matirx
 #'
-#' @example geocode_response("Linkoping")
 
 # sourcing
 source("R/installing_packages.R")
-
-
-
 
 geocode_response <- function(address) {
   if(is.vector(address) == FALSE || length(address) > 1) {

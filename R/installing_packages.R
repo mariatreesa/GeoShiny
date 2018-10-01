@@ -1,9 +1,10 @@
 
 #'This R script is used for installing  and loading the required packages
 
+#' @name InstallPackages
 #' @return nothing
 #'
-#' @export
+#'
 
 # Check if packages is installed, else install
 

@@ -1,0 +1,29 @@
+---
+title: "Geocoding"
+author: "Brian Masinde, Maria Treesa Sebastian, Omkar"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+###Introduction
+```{r}
+library(GeoShiny)
+library(httr)
+library(jsonlite)
+```
+
+This package was developed as part of Lab Assignment at Linkoping University. This package has a function geocode_response which takes an address as input and returns the lattitude and lognitude associated with that address as a matrix.
+
+
+
