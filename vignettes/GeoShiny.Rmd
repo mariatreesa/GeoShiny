@@ -23,7 +23,8 @@ library(httr)
 library(jsonlite)
 ```
 
-This package was developed as part of Lab Assignment at Linkoping University. This package has a function geocode_response which takes an address as input and returns the lattitude and lognitude associated with that address as a matrix.
+This package was developed as part of Lab Assignment at Linkoping University. This package has a function geocode_response which takes an address as input and returns the lattitude and lognitude associated with that address as a vector.
+It requires the user to provide an API key for google's Geocoding API. 
 
 
 
