@@ -1,11 +1,10 @@
 Package: GeoShiny
 Type: Package
-Title: Returns latitude and longitude of a given address. 
+Title: Geo-location. 
 Version: 0.1.0
-Author: Who wrote it
+Author: Maria Treesa Sebastian
 Maintainer: The package maintainer <brima748@student.liu.se>
-Description: Query google geocode API and returns coordinates of an address. This will be intergrated 
-  with shiny.
+Description: Query google geocode API and returns coordinates of an address.
 License: Apache License
 Encoding: UTF-8
 LazyData: true
