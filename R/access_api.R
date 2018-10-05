@@ -7,23 +7,24 @@
 #'
 #' @param address as vector
 #'
+#' @param map_key as mapkey
+#'
 #' @return latitude and longitude of the address as a matirx
 #'
 
 # sourcing
 source("R/installing_packages.R")
 
-geocode_response <- function(address) {
+geocode_response <- function(address, map_key) {
   if(is.vector(address) == FALSE || length(address) > 1) {
-    stop("Multiple addresses given")
+   stop("Multiple addresses given")
   }
   if(address == ""){
-    stop("Please enter an address")
+   stop("Please enter an address")
   }
   return.call="json"
-  sample_key="Sample_key"
   root <- "https://maps.google.com/maps/api/geocode/"
-  u <- paste0(root,return.call,"?address=",address,"&key=",sample_key)
+  u <- paste0(root,return.call,"?address=",address,"&key=",map_key)
   res <- GET((URLencode(u)))
   result_json <- content(res, as = "text", encoding = "UTF-8")
   result_ls <- fromJSON(result_json, flatten = FALSE)
@@ -34,8 +35,7 @@ geocode_response <- function(address) {
   long <- result_ls$results[[3]]$location$lng
 
   # Coordinates
-  return(cbind(lat, long))
+  return(c(lat, long))
 }
-
 
 
