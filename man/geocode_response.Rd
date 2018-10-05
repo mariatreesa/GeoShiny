@@ -6,6 +6,8 @@
 Authors: Maria Treesa Sebastian(marse306), Brian Masinde(brima748), Omkar (omkbh878)}
 \arguments{
 \item{address}{as vector}
+
+\item{map_key}{as mapkey}
 }
 \value{
 latitude and longitude of the address as a matirx
