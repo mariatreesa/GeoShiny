@@ -1,6 +1,6 @@
 
 #' Function to return address given latitude and longitude
-#' Authors: Maria Treesa Sebastian (marse306), Brian Masinde (brima748), Omkar Bhutra (omkbh878)
+#' @author: Maria,Masinde,Omkar
 #'
 #' @name reverse_geocode_response
 #'
