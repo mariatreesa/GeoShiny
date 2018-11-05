@@ -1,21 +1,21 @@
 
 #' Function to return address given latitude and longitude
-#' Authors: Maria Treesa Sebastian (marse306), Brian Masinde (brima748), Omkar Bhutra (omkbh878)
+#' @author: Maria,Masinde,Omkar
 #'
 #' @name reverse_geocode_response
 #'
 #' @export reverse_geocode_response
 #'
-#' @param lat
+#' @param lat as numeric
 #'
-#' @param long
+#' @param long as numeric
 #'
-#' @param map_key
+#' @param map_key as google api key
 #'
 #' @return a formatted address
 
 
-reverse_geocode_respone <- function(lat, long, map_key){
+reverse_geocode_response <- function(lat, long, map_key){
   # no map key go no further
   if(map_key == FALSE){
     stop("No map_key")
