@@ -18,7 +18,7 @@ source("R/installing_packages.R")
 
 geocode_response <- function(address, map_key) {
   # no address key, go no further
-  if(map_key == FALSE){
+  if(map_key == ""){
     stop("No map_key")
   }
 

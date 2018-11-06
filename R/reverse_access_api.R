@@ -17,7 +17,7 @@
 
 reverse_geocode_response <- function(lat, long, map_key){
   # no map key go no further
-  if(map_key == FALSE){
+  if(map_key == ""){
     stop("No map_key")
   }
 
