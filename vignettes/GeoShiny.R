@@ -17,5 +17,5 @@ knitr::opts_chunk$set(
 knitr::include_graphics("screenshot.png")
 
 ## ----example2, out.width="750px", out.height= 700------------------------
-knitr::include_graphics("screenshot2.png")
+knitr::include_graphics("Screenshot2.png")
 
