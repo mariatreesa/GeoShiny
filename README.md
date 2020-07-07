@@ -19,13 +19,5 @@ library(shiny)
 runGitHub("GeocodingShiny", "mariatreesa")
 ```
 
-```{r example, out.width="750px", out.height= 700}
-knitr::include_graphics("screenshot.png")
-```
-
-Given a latitude and longitude instead of an address the reverse geocode returns the complete address of the location. See the example below.
-```{r example2, out.width="750px", out.height= 700}
-knitr::include_graphics("Screenshot2.png")
-```
-
+Given a latitude and longitude instead of an address the reverse geocode returns the complete address of the location.
 Map views can also be changed from default map view to satellite view
